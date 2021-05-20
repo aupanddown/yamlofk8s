@@ -25,4 +25,4 @@ spec:
         - name: GET_HOSTS_FROM
           value: dns
         ports:
-        - containerPort: 80
+        - containerPort: 3000

@@ -8,7 +8,8 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - port: 80
+  - port: 3000
+    targetPort: 80
   selector:
     app: fronttest
     tier: frontend
