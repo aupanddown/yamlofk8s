@@ -5,9 +5,9 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - port: 3000
+    - port: 80
       targetPort: 80
       protocol: TCP
-      nodePort: 35000
+      nodePort: 32000
   selector:
     app: frontend-page

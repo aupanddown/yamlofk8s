@@ -1,28 +1,24 @@
-apiVersion: apps/v1
 kind: Deployment
+apiVersion: apps/v1
 metadata:
-  name: db
+  name: mongo
 spec:
+  replicas: 3
   selector:
     matchLabels:
-      app: db
-      tier: backend
-  replicas: 3
+      app: mongo
   template:
     metadata:
       labels:
-        app: db
-        tier: backend
+        app: mongo
     spec:
       containers:
-      - name: db
-        image: mongo
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-        env:
-        - name: GET_HOSTS_FROM
-          value: dns
-        ports:
-        - containerPort: 27017
+        - name: mongo
+          image: mongo
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 27017
+      restartPolicy: Always
+        
+        
+        
