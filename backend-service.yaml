@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: backend-page
+spec:
+  type: ClusterIP
+  ports:
+    - port: 9999
+  selector:
+    app: backend-page
