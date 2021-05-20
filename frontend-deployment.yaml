@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: fronttest
-        image: hub.docker.com/r/tonklarepo/fronttest
+        image: docker.io/tonklarepo/fronttest:lastest 
         command: [ "sleep" ]
         args: [ "infinity" ]
         env:
