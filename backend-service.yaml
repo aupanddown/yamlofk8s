@@ -6,7 +6,7 @@ metadata:
     app: backtest
     tier: backend
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 9999
   selector:

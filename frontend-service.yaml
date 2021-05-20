@@ -6,7 +6,7 @@ metadata:
     app: fronttest
     tier: frontend
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 3000
   selector:

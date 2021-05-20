@@ -6,7 +6,7 @@ metadata:
     app: db
     tier: backend
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 27017
   selector:

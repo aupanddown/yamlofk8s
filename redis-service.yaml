@@ -6,7 +6,7 @@ metadata:
     app: redis
     tier: backend
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 6379
   selector:
