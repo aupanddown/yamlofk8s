@@ -19,6 +19,7 @@ spec:
           ports:
             - containerPort: 9999
       restartPolicy: Always
+  backoffLimit: 4
         
         
         
