@@ -16,6 +16,8 @@ spec:
         - name: frontend-page
           image: tonklarepo/fronttest
           imagePullPolicy: Always
+          command: [ "sleep" ]
+          args: [ "infinity" ]
           ports:
             - containerPort: 80
       restartPolicy: Always
