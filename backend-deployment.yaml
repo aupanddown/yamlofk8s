@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  selector:
+    matchLabels:
+      app: backtest
+      tier: backend
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: backtest
+        tier: backend
+    spec:
+      containers:
+      - name: backtest
+        image: tonklarepo/backtest
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        env:
+        - name: GET_HOSTS_FROM
+          value: dns
+        ports:
+        - containerPort: 9999
