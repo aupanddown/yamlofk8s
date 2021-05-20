@@ -17,6 +17,8 @@ spec:
       containers:
       - name: fronttest
         image: tonklarepo/fronttest:latest
+      imagePullSecrets:
+      - name: dockerhub-credential
         command: [ "sleep" ]
         args: [ "infinity" ]
         env:
