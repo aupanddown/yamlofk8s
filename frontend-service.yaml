@@ -9,7 +9,6 @@ spec:
   type: LoadBalancer
   ports:
   - port: 3000
-    targetPort: 80
   selector:
     app: fronttest
     tier: frontend
