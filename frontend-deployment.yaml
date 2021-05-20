@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: fronttest
-        image: tonklarepo/fronttest
+        image: tonklarepo/fronttest:latest
         resources:
           requests:
             cpu: 100m
