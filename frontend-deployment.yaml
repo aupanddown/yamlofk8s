@@ -19,7 +19,7 @@ spec:
           command: [ "sleep" ]
           args: [ "infinity" ]
           ports:
-            - containerPort: 80
+            - containerPort: 3000
       restartPolicy: Always
         
         
