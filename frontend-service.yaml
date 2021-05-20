@@ -1,14 +1,13 @@
-apiVersion: v1
 kind: Service
+apiVersion: v1
 metadata:
-  name: frontend
-  labels:
-    app: fronttest
-    tier: frontend
+  name: frontend-page
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
-  - port: 3000
+    - port: 80
+      targetPort: 80
+         protocol: TCP
+      nodePort: 31000
   selector:
-    app: fronttest
-    tier: frontend
+    app: frontend-page
