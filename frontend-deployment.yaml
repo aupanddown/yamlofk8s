@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: fronttest
-        image: hello-world
+        image: hub.docker.com/r/tonklarepo/fronttest
         command: [ "sleep" ]
         args: [ "infinity" ]
         env:
