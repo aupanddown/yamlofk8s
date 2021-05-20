@@ -6,7 +6,7 @@ metadata:
     app: backtest
     tier: backend
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
   - port: 9999
   selector:
