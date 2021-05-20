@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend-page
-          image: tonklarepo/fronttest
+          image: tonklarepo/frontendpage
           imagePullPolicy: Always
           ports:
             - containerPort: 80
