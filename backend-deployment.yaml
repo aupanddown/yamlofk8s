@@ -1,0 +1,24 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: backend-page
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backend-page
+  template:
+    metadata:
+      labels:
+        app: backend-page
+    spec:
+      containers:
+        - name: backend-page
+          image: tonklarepo/backend
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9999
+      restartPolicy: Always
+        
+        
+        
